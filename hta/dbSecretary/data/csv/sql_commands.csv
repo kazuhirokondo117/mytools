@@ -1,0 +1,5 @@
+id,title,sql_command
+1,"file path list","select title as value_, id as key_ from file_paths.csv;"
+2,"file path","select path,file from file_paths.csv where id = 1;"
+3,"check list","select top 200 '%1' as [data_no],'%2' as [data_type],f2 as [item_id],f3 as [分類],f4 as [項目],f5 as [type],f6 as [length],f8 as [ノーマライズチェック要領],f9 as [LOGメッセージ] from [Sheet2$] where isnumeric([f2]) and [%3] = '○'
+;"

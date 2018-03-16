@@ -1,0 +1,66 @@
+<html>
+<head>
+<title>新顧客ＤＢシステム仕様</title>
+<hta:application id="oHtaApp"/>
+<meta http-equiv="Content-Type" content="text/html;charset=shift_jis"/>
+<link type="text/css" href="../css/default.css" rel="stylesheet"></link>
+<script language="vbscript" src="../../lib/lib_adodb.vbs"></script>
+<script language="vbscript" src="../../lib/lib_window.vbs"></script>
+<script language="vbscript" src="../../lib/lib_dhtml.vbs"></script>
+<script language="vbscript" src="../../lib/lib_form.vbs"></script>
+<script language="vbscript" src="../../lib/lib_fso.vbs"></script>
+<script language="vbscript" src="../script/profile.vbs"></script>
+<script language="vbscript" src="../script/frmMain.vbs"></script>
+</head>
+<body>
+<div id="id_view_cmd" style="display:none;">
+<!--input type="f_keyword" size="20"/><button onclick="cmdSearchKeyword_Click f_keyword">search</button>
+<button onclick="cmdRegisterData_Click">新規登録</button-->
+<select name="f_ddl_connstr_types" onclick="">
+<option value="-">-- connection string type --</option>
+<!--option value="csv">csv file</option-->
+<option value="excel">excel file</option>
+<!--option value="access">access file</option>
+<option value="sqlserver">sql server</option>
+<option value="oracle">oracle</option>
+<option value="mysql">mysql</option>
+<option value="postgresql">postgresql</option-->
+</select>
+<span id="id_excel_file_path"></span>
+<label name="f_txt_keyword">key:</label>
+<input name="f_txt_keyword" size="20" max_size="40" title="type-in keyword "></input>
+<button onclick="cmdExecSqlCmdExcel_Click" title="key search data">search</button>
+<span onclick="setDisplay id_view_debug" title="view debug">+</span>
+</div>
+<div>
+<select name="f_ddl_data_types" onclick="cmdExecSqlCmdExcel_Click f_ddl_data_types.value">
+<option value="-">-- data type --</option>
+<option value="連携用顧客基本">連携用顧客基本</option>
+<option value="連携用リスト履歴">連携用リスト履歴</option>
+<option value="連携用DM履歴">連携用DM履歴</option>
+<option value="連携用受講履歴">連携用受講履歴</option>
+<option value="連携用DM中止">連携用DM中止</option>
+<option value="連携用イベントのみ">連携用イベントのみ</option>
+<option value="連携用顧客統合">連携用顧客統合</option>
+</select>
+<span onclick="setDisplay id_view_cmd" title="view debug">-</span>
+</div>
+<div id="id_view_debug" style="display:none;">
+	<select name="f_ddl_udl_files">
+		<option value="-">-- udl files --</option>
+		<option value="csv.udl">csv share</option>
+	</select>
+	<select name="f_ddl_file_paths">
+		<option value="-">-- file-paths --</option>
+		<option value="csv">csv</option>
+	</select>
+	<button onclick="cmdExecSqlCommand_Click">exec-sql</button><br/>
+	<textarea name="f_txa_sql_command" rows="5" cols="80">
+select top 10 * from sample.csv;
+	</textarea><br/>
+	<textarea name="f_txa_view_debug" rows="3" cols="80"></textarea>
+</div>
+<div id="id_view_result">
+</div>
+</body>
+</html>

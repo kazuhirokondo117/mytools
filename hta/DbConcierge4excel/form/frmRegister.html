@@ -1,0 +1,43 @@
+<html>
+<head>
+<title>Work times Manager</title>
+<meta http-equiv="Content-Type" content="text/html;charset=shift_jis"/>
+<link type="text/css" href="../css/default.css" rel="stylesheet"></link>
+<script language="vbscript" src="../../lib/lib_adodb.vbs"></script>
+<script language="vbscript" src="../../lib/lib_window.vbs"></script>
+<script language="vbscript" src="../../lib/lib_dhtml.vbs"></script>
+<script language="vbscript" src="../../lib/lib_form.vbs"></script>
+<script language="vbscript" src="../../lib/lib_fso.vbs"></script>
+<!--script language="vbscript" src="../script/profile.vbs"></script-->
+<script language="vbscript" src="../script/frmRegister.vbs"></script>
+</head>
+<body>
+<div>
+<table border="3" cellpadding="3" cellspacing="3">
+<tr style="display:none;">
+<th><label>データ識別</label></th>
+<td><input name="f_item" size="4"/></td>
+</tr>
+<tr>
+<th><label>タイトル</label></th>
+<td><input name="f_item" size="40"/></td>
+</tr>
+<tr>
+<th><label>作成日</label></th>
+<td><input type="text" name="f_item" size="12"/><button onclick="vbscript:f_item(2).value = formatdatetime(now,4)">日付</button></td>
+</tr>
+<tr>
+<th><label>カテゴリ</label></th>
+<td><input type="text" name="f_item" size="20"/></td>
+</tr>
+<tr>
+<th><label>質問</label></th>
+<td><textarea name="f_item" rows="5" cols="80"></textarea></td>
+</tr>
+<tr align="center">
+<td colspan="2"><button onclick="cmdRegister_Click">登録</button><button onclick="vbscript:window.close">閉じる</botton></td>
+</tr>
+</table>
+</div>
+</body>
+</html>

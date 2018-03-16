@@ -1,0 +1,4 @@
+id,title,sql_command
+1,"file path list","select title as value_, id as key_ from file_paths.csv;"
+2,"file path","select path,file from file_paths.csv where id = 1;"
+3,"data select","select top 200 [f2] as item_id,f3 as [カラム論理名],[f11] as [カラム物理名],f19 as [データ型],f23 as [桁数],f25 as [制度],[f27] as [NULL],f29 as [一意],[f31] as [主キー],f33 as [デフォルト],f36 as [説明] from [%1$] where isnumeric([f2]) and [f11] is not null;"

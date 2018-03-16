@@ -1,0 +1,4 @@
+id,title,sql_command
+1,"file path list","select title as value_, id as key_ from file_paths.csv;"
+2,"file path","select path,file from file_paths.csv where id = 1;"
+3,"check list","select top 20 f1 as [id],f2 as [ƒf[ƒ^‚m‚n],f3 as [•ª—Ş],f4 as [–¼Ì],f5 as [‘¶‘±^”p~],[%1] as [%2],f19 as [LO‹¤],f20 as [Š©DM],f21 as [¤Ş],f22 as [¿“ü],f23 as [•Ïƒf],f24 as [ƒTƒu],f25 as [ŠîŠ²‹¤’Ê],f16 as [”õl] from [ˆê——$] where isnumeric(f1) and [%1] = '›';"
