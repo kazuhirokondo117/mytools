@@ -221,7 +221,7 @@ Private Function getActiveConnection( _
 			If f_ddl_udl_files.value <> "-" Then
 				strConnStr = createConnectionStringUdl(f_ddl_udl_files.value)
 			Else
-				'--Msgbox "udl file not selected!!",vbCritical,"選択エラー"
+				Msgbox "udl file not selected!!",vbCritical,"選択エラー"
 			End If
 		Case "csv"
 			If f_ddl_file_paths.value <> "-" Then

@@ -34,7 +34,7 @@
 	<select name="f_ddl_file_paths" id="id_ddl_csv_files" onchange="viewSchema_Tables ''" style="display:none;">
 		<option value="-">-- file-paths --</option>
 		<option value="csv">csv</option>
-		<option value="C:\Users\winridge\Documents\mydata\csv">csv-share</option>
+		<option value="C:\Users\kazuh\Documents\mydata\csv">csv-share</option>
 	</select>
 	<span onclick="" title="select schema">...</span>
 	<span id="id_ddl_excel_files" style="display:none;">
@@ -68,6 +68,10 @@
 <div id="id_view_action">
 	<button onclick="cmdExecSqlCommand_Click 'query'">sql-query</button>
 	<button onclick="cmdExecSqlCommand_Click 'execute'">sql-execute</button>
+	<button onclick="setDisplay id_key_search">...key/search</button>
+	<button onclick="setDisplay id_userid_passwd">...user-id/passwd</button>
+	<button onclick="setDisplay id_schema_info">...schema-info</button>
+	<button onclick="setDisplay id_todo_actions">...ToDo/Actions</button>
 	<table border="0">
 	<tr>
 	<!--// sql command info -->
@@ -76,13 +80,15 @@
 	</textarea>
 	</td>
 	<!--// search info -->
-	<td valign="top">
+	<td valign="top" style="display:none;" id="id_key_search">
 	<input type="text" name="f_txt_keyword" size="20" title="type-in keyword"></input><br/>
-	<button onclick="cmdActionEventExcel_Click">key search</button><br/>
+	<button onclick="cmdActionEventExcel_Click">search</button>
+	<button onclick="vbscript:f_txt_keyword.value = ''">clear</button>
+	<br/>
 	<!--br/-->
 	</td>
 	<!--// database info -->
-	<td  valign="top" style="width:"200px;">
+	<td  valign="top" style="width:"200px;" style="display:none;" id="id_userid_passwd">
 	<table border="0">
 	<tr>
 		<td>
@@ -104,12 +110,12 @@
 	</table>
 	</td>
 	<!--// schema info -->
-	<td valign="top">
+	<td valign="top" style="display:none;" id="id_schema_info" nowrap="true">
 	<span id="id_schema_options" title="スキーマオプションを設定する。">
-	<input type="checkbox" onclick="" name="f_cbx_row_header" title="Enable Row Header">row header</button>
+	<input type="checkbox" onclick="" name="f_cbx_row_header" title="Enable Row Header">row-header</button>
 	</span>
 	</td>
-	<td valign="top">
+	<td valign="top" style="display:none;" id="id_todo_actions">
 	<button onclick="cmdActionToDo_Click">ToDo</button><br/>
 	<button onclick="cmdGetSchemaInfo_Click">get-schemainfo</button><br/>
 	</td>

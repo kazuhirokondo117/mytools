@@ -29,7 +29,7 @@ Dim g_strDataHome
 Private Sub window_onload
 	'-- var String
 	Dim strCmdLine
-	window.resizeTo 1800, 768
+	window.resizeTo 1024, 600
 	
 	Set g_objFso = CreateObject("Scripting.FileSystemObject")
 	
